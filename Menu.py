@@ -8,12 +8,7 @@ def mostrarMenu2():
     print("2. Insertar al final")
     print("3. Mostrar lista")
     print("4. Buscar elemento")
-    print("5. Eliminar primer elemento")
-    print("6. Eliminar por valor")
-    print("7. Tamaño de la lista")
-    print("8. Invertir lista")
-    print("9. Ordenar lista")
-    print("10. Salir")
+    print("5. Salir")
     print("------------------------------------")
 
 def mainCircular():
@@ -35,25 +30,14 @@ def mainCircular():
             clist.display()
 
         if op=="4":
-            k= input("Digite el valor a buscar ")
-            clist.search(k)
+            v= input("Digite el valor a buscar ")
+            if clist.search(v):
+                print(f"El valor {v} se encuentra en la lista.")
+            else:
+                print(f"El valor {v} no se encuentra en la lista.")
 
         if op=="5":
-            clist.delete_first()
-
-        if op=="6":
-            k = input("Digite el valor a eliminar: ")
-            clist.delete_value(k)
-
-        if op=="7":
-            print("Tamaño de la lista:", clist.mostrarTam())
-
-        if op=="8":
-            clist.reverse()
-
-        if op=="9":
-            clist.sort()
-
-        if op=="10":
             print("Saliendo...")
             break
+
+
